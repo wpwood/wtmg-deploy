@@ -2,11 +2,6 @@
   "ipaddress": "50.57.94.82",
   "name": "www.stupiphany.org",
   "fqdn": "www.stupiphany.org",
-  "mysql": {
-    "server_debian_password": "V0sxwgppAvetbGG",
-    "server_root_password": "a06mf6fKhOR2cnx",
-    "server_repl_password": "C0VeVKFivPv0svC"
-  },
   "normal": {
     "wordpress": {
       "version": "latest",

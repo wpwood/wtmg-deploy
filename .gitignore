@@ -1,2 +1,3 @@
 config.cfg
 ssh-config
+encrypted_data_bag_secret
