@@ -57,3 +57,8 @@ if platform? 'windows'
     not_if { File.exist?("#{node['mysql']['client']['ruby_dir']}\\libmysql.dll") }
   end
 end
+
+databag = Chef::EncryptedDataBagItem.load("mysql", "credentials")
+node.set['mysql']['server_debian_password'] = databag['server_debian_password']
+node.set['mysql']['server_root_password'] = databag['server_root_password']
+node.set['mysql']['server_repl_password'] = databag['server_repl_password']
