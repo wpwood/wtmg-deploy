@@ -11,7 +11,18 @@
       }
     }
   },
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "groups": ["admin", "wheel", "sysadmin"],
+        "users": ["wpwood"],
+        "passwordless": "true"
+      }
+    }
+  },
   "run_list": [
+    "recipe[wtmg]",
+    "recipe[sudo]",
     "recipe[wordpress]",
     "recipe[git]"
   ]
