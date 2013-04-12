@@ -11,13 +11,11 @@
       }
     }
   },
-  "default_attributes": {
-    "authorization": {
-      "sudo": {
-        "groups": ["admin", "wheel", "sysadmin"],
-        "users": ["wpwood"],
-        "passwordless": "true"
-      }
+  "authorization": {
+    "sudo": {
+      "groups": ["admin", "wheel", "sysadmin"],
+      "users": ["wpwood"],
+      "passwordless": "true"
     }
   },
   "run_list": [

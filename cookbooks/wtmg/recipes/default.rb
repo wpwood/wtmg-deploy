@@ -5,6 +5,7 @@ end
 user "wpwood" do
   comment "Bill Woodward"
   password "$1$qD9lYpLa$H4rNHY2g6AkO/kahg3vAu0"
+  shell "/bin/bash"
 
   action :create
 end
