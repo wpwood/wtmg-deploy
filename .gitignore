@@ -16,4 +16,4 @@ cookbooks/windows/
 cookbooks/wordpress/
 cookbooks/xml/
 cookbooks/yum/
-
+data_bags/node
