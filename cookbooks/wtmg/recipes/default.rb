@@ -10,12 +10,12 @@ user "wpwood" do
   action :create
 end
 
-# Decrypt mysql passwords
-
+# MySQL passwords
 databag = Chef::EncryptedDataBagItem.load("mysql", "credentials")
 node.set['mysql']['server_debian_password'] = databag['server_debian_password']
 node.set['mysql']['server_root_password'] = databag['server_root_password']
 node.set['mysql']['server_repl_password'] = databag['server_repl_password']
 
-
-
+# Postfix passwords
+databag = Chef::EncryptedDataBagItem.load("postfix", "credentials")
+node.set['postfix']['smtp_sasl_passwd'] = databag['smtp_sasl_passwd']

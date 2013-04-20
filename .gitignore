@@ -10,6 +10,7 @@ cookbooks/git/
 cookbooks/mysql/
 cookbooks/openssl/
 cookbooks/php/
+cookbooks/postfix/
 cookbooks/runit/
 cookbooks/sudo/
 cookbooks/windows/
