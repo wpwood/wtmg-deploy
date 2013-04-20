@@ -6,7 +6,7 @@ cookbook 'php'
 cookbook 'apache2'
 cookbook 'git'
 cookbook 'wordpress'
+cookbook 'mysql'
 cookbook 'wtmg', path: '/home/billwoodward/builds/wtmg-deploy/cookbooks/wtmg'
-cookbook 'mysql', path: '/home/billwoodward/builds/wtmg-deploy/cookbooks/mysql'
 
 
