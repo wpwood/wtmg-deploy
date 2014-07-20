@@ -1,0 +1,40 @@
+{
+  "ipaddress": "50.57.94.82",
+  "name": "www.stupiphany.org",
+  "fqdn": "www.stupiphany.org",
+  "normal": {
+    "wordpress": {
+      "version": "latest",
+      "db": {
+        "database": "wordpress",
+        "user": "wordpress"
+      }
+    }
+  },
+  "authorization": {
+    "sudo": {
+      "groups": ["admin", "wheel", "sysadmin"],
+      "users": ["wpwood"],
+      "passwordless": "true"
+    }
+  },
+  "postfix": {
+    "relayhost": "[smtp.gmail.com]:587",
+    "smtpd_use_tls": "yes",
+    "smtp_sasl_auth_enable": "yes",
+    "smtp_sasl_user_name": "wpwood@gmail.com",
+    "inet_interfaces": "all",
+    "smtp_tls_cafile": "/etc/ssl/certs/Thawte_Premium_Server_CA.pem",
+    "virtual_domains": ["stupiphany.org", "saifa.net"],
+    "virtual_aliases": [["wpwood@stupiphany.org", "wpwood@gmail.com"]]
+  },
+  "run_list": [
+    "recipe[wtmg]",
+    "recipe[sudo]",
+    "recipe[wordpress]",
+    "recipe[git]",
+    "recipe[postfix]",
+    "recipe[postfix::sasl_auth]",
+    "recipe[postfix::virtual]"
+  ]
+}
